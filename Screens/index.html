@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Ayop | Portfolio</title>
+    <link rel="icon" type="image/png" href="../Assets/Once-piece.png">
+    <link rel="stylesheet" href="../Styles/index.css">
+    <script src="https://kit.fontawesome.com/d10a10b4f1.js" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          // Initializing with your Public Key
+          emailjs.init("iQB02VviksgO66unX");
+       })();
+    </script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo-text">Jownats Dev.</div>
+        <div class="nav-links">
+            <a href="#about">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section id="about" class="hero-section">
+    <div class="about-container">
+        <div class="about-image-wrapper">
+            <div class="about-image" id="profile-card">
+                <img src="../Assets/Jonats.jpg" alt="Jonathan Ayop">
+                <div class="image-glare"></div>
+            </div>
+            <div class="image-blob"></div>
+        </div>
+
+        <div class="about-text">
+            <div class="badge">Available for Work</div>
+            <h1>Hi, I'm <span class="highlight">Jonathan</span></h1>
+            <h2 class="typing-container">I am a <span id="roles"></span></h2> 
+            
+            <p class="subtitle">Fresh Graduate | Information Technology</p>
+            <p class="description">
+                I am a fresh graduate in Information Technology with a strong interest in
+                software, web, and mobile application development. I enjoy building 
+                solutions that bridge the gap between complex problems and user-friendly interfaces.
+            </p>
+            
+            <div class="cta-group">
+                <a href="#projects" class="primary-btn">View My Work</a>
+                <a href="../Assets/RESUMÉ - Ayop.pdf" class="secondary-btn" download="Jonathan_Ayop_Resume.pdf">
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>HTML</span>
+                <span>90%</span>
+            </div>
+            <div class="progress-line" data-skill="HTML"><span style="width: 90%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>CSS</span>
+                <span>85%</span>
+            </div>
+            <div class="progress-line" data-skill="CSS"><span style="width: 85%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>JavaScript</span>
+                <span>80%</span>
+            </div>
+            <div class="progress-line" data-skill="JS"><span style="width: 80%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>React Native</span>
+                <span>75%</span>
+            </div>
+            <div class="progress-line" data-skill="React"><span style="width: 75%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Python</span>
+                <span>88%</span>
+            </div>
+            <div class="progress-line" data-skill="Python"><span style="width: 88%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Node.js</span>
+                <span>70%</span>
+            </div>
+            <div class="progress-line" data-skill="Node"><span style="width: 70%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>Django</span>
+                <span>82%</span>
+            </div>
+            <div class="progress-line" data-skill="Django"><span style="width: 82%;"></span></div>
+        </div>
+        <div class="skill-item">
+            <div class="skill-info">
+                <span>PostgreSQL</span>
+                <span>78%</span>
+            </div>
+            <div class="progress-line" data-skill="SQL"><span style="width: 78%;"></span></div>
+        </div>
+    </div>
+    
+    <div class="floating-tools">
+        <div class="tool-icon" style="--delay: 0s;"><i class="fa-brands fa-python"></i></div>
+        <div class="tool-icon" style="--delay: 1s;"><i class="fa-brands fa-js-square"></i></div>
+        <div class="tool-icon" style="--delay: 2s;"><i class="fa-brands fa-react"></i></div>
+        <div class="tool-icon" style="--delay: 3s;"><i class="fa-brands fa-html5"></i></div>
+        <div class="tool-icon" style="--delay: 4s;"><i class="fa-brands fa-css3-alt"></i></div>
+        <div class="tool-icon" style="--delay: 5s;"><i class="fa-brands fa-node-js"></i></div>
+        <div class="tool-icon" style="--delay: 6s;"><i class="fa-solid fa-database"></i></div>
+        <div class="tool-icon" style="--delay: 7s;"><i class="fa-brands fa-git-alt"></i></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+        <div class="project">
+            <div class="project-header">
+                <h3>Smart Water Meter System (Capstone Project)</h3>
+                <span class="project-tag">IoT & AI</span>
+            </div>
+            <p class="project-desc">
+                Developed a <strong>Non-Intrusive Smart Water Meter System</strong> that uses AI-powered image recognition to digitize analog water meter readings.
+            </p>
+            <div class="project-details">
+                <div class="detail-col">
+                    <h4><i class="fa-solid fa-code"></i> My Role: Full-Stack Developer</h4>
+                    <ul>
+                        <li><strong>Backend:</strong> FastAPI (Python) & PostgreSQL</li>
+                        <li><strong>AI:</strong> ResNet-18 CNN for OCR reading</li>
+                    </ul>
+                </div>
+                <div class="detail-col">
+                    <h4><i class="fa-solid fa-microchip"></i> Materials & Tools</h4>
+                    <ul>
+                        <li><strong>Hardware:</strong> Raspberry Pi 4, LoRa, ESP32</li>
+                        <li><strong>Dev Tools:</strong> Arduino IDE, Postman, Figma</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>Payroll Management System</h3>
+                <span class="project-tag">Desktop App</span>
+            </div>
+            <p class="project-desc">
+                A robust desktop application designed to automate employee registration, salary calculations, and secure credential management.
+            </p>
+            <div class="project-details">
+                <div class="detail-col">
+                    <h4><i class="fa-solid fa-layer-group"></i> Key Features</h4>
+                    <ul>
+                        <li><strong>GUI:</strong> Built using Tkinter</li>
+                        <li><strong>Database:</strong> SQLite3 implementation</li>
+                    </ul>
+                </div>
+                <div class="detail-col">
+                    <h4><i class="fa-solid fa-gears"></i> Technical Implementation</h4>
+                    <ul>
+                        <li><strong>Auth:</strong> Secure Login system</li>
+                        <li><strong>Logic:</strong> Automated gross pay/deductions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-header">
+                <h3>Univote: Cross-Platform Voting System</h3>
+                <span class="project-tag">Mobile & Web</span>
+            </div>
+            <p class="project-desc">
+                A secure digital voting ecosystem featuring a mobile application for voters and a centralized web dashboard for administrators.
+            </p>
+            <div class="project-details">
+                <div class="detail-col">
+                    <h4><i class="fa-solid fa-mobile-screen-button"></i> My Role: Mobile Developer</h4>
+                    <ul>
+                        <li><strong>Mobile:</strong> React Native & Expo Go</li>
+                        <li><strong>Auth:</strong> Integrated Gmail API</li>
+                    </ul>
+                </div>
+                <div class="detail-col">
+                    <h4><i class="fa-solid fa-server"></i> System Architecture</h4>
+                    <ul>
+                        <li><strong>Backend:</strong> Django (Python)</li>
+                        <li><strong>Admin:</strong> Web dashboard for result visualization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-actions">
+                <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="edu-card">
+        <div class="edu-header">
+            <strong>Bachelor of Science in Information Technology</strong>
+            <span class="edu-date">2022 - 2026</span>
+        </div>
+        <p class="school-name">University of Science and Technology of Southern Philippines (USTP)</p>
+        <p class="location">CDO Campus</p>
+    </div>
+    <div class="edu-card">
+        <div class="edu-header">
+            <strong>Senior High School | TVL - ICT</strong>
+            <span class="edu-date">2020 - 2022</span>
+        </div>
+        <p class="school-name">Lumbia National High School (LNHS)</p>
+    </div>
+    <div class="edu-card">
+        <div class="edu-header">
+            <strong>Junior High School</strong>
+            <span class="edu-date">2016 - 2020</span>
+        </div>
+        <p class="school-name">Lumbia National High School (LNHS)</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-wrapper">
+        <div class="contact-card">
+            <form class="contact-form" id="contact-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+        <div class="direct-contact">
+            <div class="contact-header-text">
+                <h3>Let's collaborate!</h3>
+                <p>I am currently looking for new opportunities. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+            </div>
+            <div class="info-list">
+                <div class="info-item-box">
+                    <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <span>Email Me</span>
+                        <p>jayop216@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item-box">
+                    <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <span>Call Me</span>
+                        <p>09269049360 (TM)</p>
+                    </div>
+                </div>
+                <div class="info-item-box">
+                    <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <span>Location</span>
+                        <p>CDO, Philippines</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="social-links">
+            <a href="https://www.facebook.com/jonathan.ayop.9" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/jownatsss/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/Jonathan06192004" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <ul class="footer-nav">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+        <p>© 2026 Jonathan Ayop | Built with Passion</p>
+    </div>
+</footer>
+
+<script src="../JS/index.js"></script>
+</body>
+</html>
