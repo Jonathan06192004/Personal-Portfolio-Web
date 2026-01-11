@@ -15,6 +15,7 @@
           emailjs.init("iQB02VviksgO66unX");
        })();
     </script>
+    <script src="JS/scroll-animations.js"></script>
 </head>
 <body>
 
@@ -139,93 +140,117 @@
 <section id="projects">
     <h2>Projects</h2>
     <div class="project-list">
-        <div class="project">
+        <div class="project-dropdown">
             <div class="project-header">
-                <h3>Smart Water Meter System (Capstone Project)</h3>
-                <span class="project-tag">IoT & AI</span>
-            </div>
-            <p class="project-desc">
-                Developed a <strong>Non-Intrusive Smart Water Meter System</strong> that uses AI-powered image recognition to digitize analog water meter readings.
-            </p>
-            <div class="project-details">
-                <div class="detail-col">
-                    <h4><i class="fa-solid fa-code"></i> My Role: Full-Stack Developer</h4>
-                    <ul>
-                        <li><strong>Backend:</strong> FastAPI (Python) & PostgreSQL</li>
-                        <li><strong>AI:</strong> ResNet-18 CNN for OCR reading</li>
-                    </ul>
+                <div class="project-icon">
+                    <i class="fa-solid fa-microchip"></i>
                 </div>
-                <div class="detail-col">
-                    <h4><i class="fa-solid fa-microchip"></i> Materials & Tools</h4>
-                    <ul>
-                        <li><strong>Hardware:</strong> Raspberry Pi 4, LoRa, ESP32</li>
-                        <li><strong>Dev Tools:</strong> Arduino IDE, Postman, Figma</li>
-                    </ul>
+                <div class="project-title">
+                    <h3>Smart Water Meter System (Capstone Project)</h3>
+                    <span class="project-tag">IoT</span>
                 </div>
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
             </div>
-            <div class="project-actions">
-                <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <div class="project-content">
+                <p class="project-desc">
+                    Developed a <strong>Non-Intrusive Smart Water Meter System</strong> that uses AI-powered image recognition to digitize analog water meter readings.
+                </p>
+                <div class="project-details">
+                    <div class="detail-col">
+                        <h4><i class="fa-solid fa-code"></i> My Role: Full-Stack Developer</h4>
+                        <ul>
+                            <li><strong>Backend:</strong> FastAPI (Python) & PostgreSQL</li>
+                            <li><strong>AI:</strong> ResNet-18 CNN for OCR reading</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4><i class="fa-solid fa-microchip"></i> Materials & Tools</h4>
+                        <ul>
+                            <li><strong>Hardware:</strong> Raspberry Pi 4, LoRa, ESP32</li>
+                            <li><strong>Dev Tools:</strong> Arduino IDE, Postman, Figma</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                    <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
             </div>
         </div>
 
-        <div class="project">
+        <div class="project-dropdown">
             <div class="project-header">
-                <h3>Payroll Management System</h3>
-                <span class="project-tag">Desktop App</span>
-            </div>
-            <p class="project-desc">
-                A robust desktop application designed to automate employee registration, salary calculations, and secure credential management.
-            </p>
-            <div class="project-details">
-                <div class="detail-col">
-                    <h4><i class="fa-solid fa-layer-group"></i> Key Features</h4>
-                    <ul>
-                        <li><strong>GUI:</strong> Built using Tkinter</li>
-                        <li><strong>Database:</strong> SQLite3 implementation</li>
-                    </ul>
+                <div class="project-icon">
+                    <i class="fa-solid fa-desktop"></i>
                 </div>
-                <div class="detail-col">
-                    <h4><i class="fa-solid fa-gears"></i> Technical Implementation</h4>
-                    <ul>
-                        <li><strong>Auth:</strong> Secure Login system</li>
-                        <li><strong>Logic:</strong> Automated gross pay/deductions</li>
-                    </ul>
+                <div class="project-title">
+                    <h3>Payroll Management System</h3>
+                    <span class="project-tag">Desktop App</span>
                 </div>
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
             </div>
-            <div class="project-actions">
-                <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <div class="project-content">
+                <p class="project-desc">
+                    A robust desktop application designed to automate employee registration, salary calculations, and secure credential management.
+                </p>
+                <div class="project-details">
+                    <div class="detail-col">
+                        <h4><i class="fa-solid fa-layer-group"></i> Key Features</h4>
+                        <ul>
+                            <li><strong>GUI:</strong> Built using Tkinter</li>
+                            <li><strong>Database:</strong> SQLite3 implementation</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4><i class="fa-solid fa-gears"></i> Technical Implementation</h4>
+                        <ul>
+                            <li><strong>Auth:</strong> Secure Login system</li>
+                            <li><strong>Logic:</strong> Automated gross pay/deductions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                    <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
             </div>
         </div>
 
-        <div class="project">
+        <div class="project-dropdown">
             <div class="project-header">
-                <h3>Univote: Cross-Platform Voting System</h3>
-                <span class="project-tag">Mobile & Web</span>
-            </div>
-            <p class="project-desc">
-                A secure digital voting ecosystem featuring a mobile application for voters and a centralized web dashboard for administrators.
-            </p>
-            <div class="project-details">
-                <div class="detail-col">
-                    <h4><i class="fa-solid fa-mobile-screen-button"></i> My Role: Mobile Developer</h4>
-                    <ul>
-                        <li><strong>Mobile:</strong> React Native & Expo Go</li>
-                        <li><strong>Auth:</strong> Integrated Gmail API</li>
-                    </ul>
+                <div class="project-icon">
+                    <i class="fa-solid fa-vote-yea"></i>
                 </div>
-                <div class="detail-col">
-                    <h4><i class="fa-solid fa-server"></i> System Architecture</h4>
-                    <ul>
-                        <li><strong>Backend:</strong> Django (Python)</li>
-                        <li><strong>Admin:</strong> Web dashboard for result visualization</li>
-                    </ul>
+                <div class="project-title">
+                    <h3>Univote: Cross-Platform Voting System</h3>
+                    <span class="project-tag">Mobile & Web</span>
                 </div>
+                <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
             </div>
-            <div class="project-actions">
-                <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
-                <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            <div class="project-content">
+                <p class="project-desc">
+                    A secure digital voting ecosystem featuring a mobile application for voters and a centralized web dashboard for administrators.
+                </p>
+                <div class="project-details">
+                    <div class="detail-col">
+                        <h4><i class="fa-solid fa-mobile-screen-button"></i> My Role: Mobile Developer</h4>
+                        <ul>
+                            <li><strong>Mobile:</strong> React Native & Expo Go</li>
+                            <li><strong>Auth:</strong> Integrated Gmail API</li>
+                        </ul>
+                    </div>
+                    <div class="detail-col">
+                        <h4><i class="fa-solid fa-server"></i> System Architecture</h4>
+                        <ul>
+                            <li><strong>Backend:</strong> Django (Python)</li>
+                            <li><strong>Admin:</strong> Web dashboard for result visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/Jonathan06192004" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                    <a href="#" class="btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                </div>
             </div>
         </div>
     </div>

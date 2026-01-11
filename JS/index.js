@@ -124,10 +124,159 @@ function initContactForm() {
     });
 }
 
+// --- SMOOTH PROJECT EXPANSION ANIMATION ---
+function initProjectAnimation() {
+    const projectsSection = document.getElementById('projects');
+    const projectContainers = document.querySelectorAll('.project-minimized');
+    
+    if (!projectsSection || !projectContainers.length) return;
+
+    let animationFrame;
+    let currentMargin = 0;
+    const targetMargin = 400;
+    
+    function animateMargin(target, duration = 800) {
+        const startMargin = currentMargin;
+        const startTime = performance.now();
+        
+        function animate(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Smooth easing function (ease-out-cubic)
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            
+            currentMargin = startMargin + (target - startMargin) * easeProgress;
+            projectsSection.style.marginBottom = `${currentMargin}px`;
+            
+            if (progress < 1) {
+                animationFrame = requestAnimationFrame(animate);
+            }
+        }
+        
+        if (animationFrame) cancelAnimationFrame(animationFrame);
+        animationFrame = requestAnimationFrame(animate);
+    }
+    
+    function animateProjectContent(container, show, duration = 800) {
+        const icon = container.querySelector('.project-icon');
+        const expanded = container.querySelector('.project-expanded');
+        
+        if (!icon || !expanded) return;
+        
+        const startTime = performance.now();
+        
+        function animate(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Smooth easing function
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            
+            if (show) {
+                expanded.style.visibility = 'visible';
+                expanded.style.opacity = easeProgress;
+                icon.style.opacity = 1 - easeProgress;
+                if (easeProgress > 0.5) icon.style.visibility = 'hidden';
+            } else {
+                icon.style.visibility = 'visible';
+                icon.style.opacity = easeProgress;
+                expanded.style.opacity = 1 - easeProgress;
+                if (easeProgress > 0.5) expanded.style.visibility = 'hidden';
+            }
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        }
+        
+        requestAnimationFrame(animate);
+    }
+    
+    projectContainers.forEach(container => {
+        container.addEventListener('mouseenter', () => {
+            animateMargin(targetMargin);
+            animateProjectContent(container, true);
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            animateMargin(0);
+            animateProjectContent(container, false);
+        });
+    });
+}
+
+// --- FLOATING ICONS CURSOR AVOIDANCE ---
+function initFloatingIconsAvoidance() {
+    const skillsSection = document.getElementById('skills');
+    const toolIcons = document.querySelectorAll('.tool-icon');
+    
+    if (!skillsSection || !toolIcons.length) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let isActive = false;
+    let animationId;
+
+    function updateIconPositions() {
+        if (!isActive) return;
+        
+        toolIcons.forEach((icon, index) => {
+            const iconRect = icon.getBoundingClientRect();
+            const iconCenterX = iconRect.left + iconRect.width / 2;
+            const iconCenterY = iconRect.top + iconRect.height / 2;
+            
+            const distance = Math.sqrt(
+                Math.pow(mouseX - iconCenterX, 2) + Math.pow(mouseY - iconCenterY, 2)
+            );
+            
+            const avoidanceRadius = 150;
+            
+            if (distance < avoidanceRadius && distance > 0) {
+                const angle = Math.atan2(iconCenterY - mouseY, iconCenterX - mouseX);
+                const force = (avoidanceRadius - distance) / avoidanceRadius;
+                const moveX = Math.cos(angle) * force * 60;
+                const moveY = Math.sin(angle) * force * 60;
+                
+                icon.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            } else {
+                icon.style.transform = 'translate(0px, 0px)';
+            }
+        });
+        
+        if (isActive) {
+            animationId = requestAnimationFrame(updateIconPositions);
+        }
+    }
+
+    skillsSection.addEventListener('mouseenter', () => {
+        isActive = true;
+        if (animationId) cancelAnimationFrame(animationId);
+        updateIconPositions();
+    });
+
+    skillsSection.addEventListener('mouseleave', () => {
+        isActive = false;
+        if (animationId) cancelAnimationFrame(animationId);
+        toolIcons.forEach(icon => {
+            icon.style.transform = 'translate(0px, 0px)';
+        });
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isActive) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        }
+    });
+}
+
 // Start everything on Load
 document.addEventListener("DOMContentLoaded", () => {
     type();
     initTilt();
     initHeroGlow();
     initContactForm();
+    initProjectAnimation();
+    initFloatingIconsAvoidance();
 });
