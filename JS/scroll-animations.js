@@ -17,7 +17,7 @@ const observer = new IntersectionObserver((entries) => {
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Observe all sections and major elements
-    const elementsToAnimate = document.querySelectorAll('section, .skill-item, .project, .edu-card');
+    const elementsToAnimate = document.querySelectorAll('section, .skill-item, .project-dropdown, .edu-card');
     elementsToAnimate.forEach(el => observer.observe(el));
     
     // Special handling for skill progress bars

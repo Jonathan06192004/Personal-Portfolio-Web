@@ -327,13 +327,13 @@ h2 {
 @keyframes slideIn { from { width: 0; } }
 
 /* SCROLL ANIMATIONS */
-section, .skill-item, .project, .edu-card {
+section, .skill-item, .project-dropdown, .edu-card {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-section.animate-in, .skill-item.animate-in, .project.animate-in, .edu-card.animate-in {
+section.animate-in, .skill-item.animate-in, .project-dropdown.animate-in, .edu-card.animate-in {
     opacity: 1;
     transform: translateY(0);
 }
